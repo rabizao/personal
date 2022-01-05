@@ -1,7 +1,7 @@
 ---
 title: "Deploy automático do GitHub para qualquer servidor"
 excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-createdAt: "2021-04-03"
+createdAt: "2022-01-05 00:00"
 author: rafaelbizao
 ---
 
@@ -83,5 +83,3 @@ Você poderá ver o progresso do deploy, assim como consultar o log clicando em 
 ![Deploy](/images/post-deploy-automatico/deploy.png "Deploy")
 
 Por hoje é isso, pessoal! Abraços.
-
-
