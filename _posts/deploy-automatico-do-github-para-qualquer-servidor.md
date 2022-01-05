@@ -1,6 +1,6 @@
 ---
 title: "Deploy automático do GitHub para qualquer servidor"
-excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+excerpt: "Uma maneira simples de implementar integração contínua nos seus projetos do GitHub para quaisquer servidores (tanto em *clouds* - AWS, Google, Azure, etc como servidores próprios ou VPS)."
 createdAt: "2022-01-05 00:00"
 author: rafaelbizao
 ---
