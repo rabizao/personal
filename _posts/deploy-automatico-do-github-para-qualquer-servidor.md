@@ -1,7 +1,7 @@
 ---
 title: "Deploy automático do GitHub para qualquer servidor"
 excerpt: "Uma maneira simples de implementar integração contínua nos seus projetos do GitHub para quaisquer servidores (tanto em clouds - AWS, Google, Azure, etc como servidores próprios ou VPS)."
-createdAt: "2022-01-05 00:00"
+createdAt: "2022-01-06"
 author: rafaelbizao
 ---
 
