@@ -1,16 +1,581 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --font: 400 18px/1.5 Roboto, sans-serif;
+  --primary-color: #404040;
+  --secondary-color: #fff;
+  --xxsmall: 2px;
+  --xsmall: 5px;
+  --small: 10px;
+  --medium: 30px;
+  --large: 50px;
+  --xlarge: 100px;
+  --xxlarge: 200px;
+  --xxxlarge: 300px;
+  --xxxxlarge: 500px;
+  --screen-size: 850px;
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
   box-sizing: border-box;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a {
+  color: #1cacd7;
+}
+
+body {
+  font: var(--font);
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.style-none {
+  list-style-type: none;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: var(--font);
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+  border: 0;
+  border-bottom: var(--border);
+}
+
+textarea {
+  height: 100px;
+  border: var(--border);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.background-primary {
+  background-color: var(--primary-color);
+}
+
+.size-xxsmall {
+  font-size: xx-small;
+}
+
+.size-xsmall {
+  font-size: x-small;
+}
+
+.size-smaller {
+  font-size: smaller;
+}
+
+.size-small {
+  font-size: small;
+}
+
+.size-large {
+  font-size: large;
+}
+
+.size-larger {
+  font-size: larger;
+}
+
+.size-xlarge {
+  font-size: x-large;
+}
+
+.size-xxlarge {
+  font-size: xx-large;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.padding-xsmall {
+  padding: var(--xsmall);
+}
+
+.padding-small {
+  padding: var(--small);
+}
+
+.padding-medium {
+  padding: var(--medium);
+}
+
+.padding-large {
+  padding: var(--large);
+}
+
+.padding-xlarge {
+  padding: var(--xlarge);
+}
+
+.padding-xxlarge {
+  padding: var(--xxlarge);
+}
+
+.padding-xxxlarge {
+  padding: var(--xxxlarge);
+}
+
+.padding-sides-xsmall {
+  padding-left: var(--xsmall);
+  padding-right: var(--xsmall);
+}
+
+.padding-sides-small {
+  padding-left: var(--small);
+  padding-right: var(--small);
+}
+
+.padding-sides-medium {
+  padding-left: var(--medium);
+  padding-right: var(--medium);
+}
+
+.padding-sides-large {
+  padding-left: var(--large);
+  padding-right: var(--large);
+}
+
+.padding-vertical-xsmall {
+  padding-top: var(--xsmall);
+  padding-bottom: var(--xsmall);
+}
+
+.padding-vertical-small {
+  padding-top: var(--small);
+  padding-bottom: var(--small);
+}
+
+.padding-vertical-medium {
+  padding-top: var(--medium);
+  padding-bottom: var(--medium);
+}
+
+.padding-vertical-large {
+  padding-top: var(--large);
+  padding-bottom: var(--large);
+}
+
+.padding-vertical-xlarge {
+  padding-top: var(--xlarge);
+  padding-bottom: var(--xlarge);
+}
+
+.padding-top-small {
+  padding-top: var(--small);
+}
+
+.padding-top-medium {
+  padding-top: var(--medium);
+}
+
+.padding-top-large {
+  padding-top: var(--large);
+}
+
+.padding-top-xlarge {
+  padding-top: var(--xlarge);
+}
+
+.padding-right-xsmall {
+  padding-right: var(--xsmall);
+}
+
+.padding-right-small {
+  padding-right: var(--small);
+}
+
+.padding-bottom-xsmall {
+  padding-bottom: var(--xsmall);
+}
+
+.padding-bottom-small {
+  padding-bottom: var(--small);
+}
+
+.padding-bottom-medium {
+  padding-bottom: var(--medium);
+}
+
+.padding-bottom-large {
+  padding-bottom: var(--large);
+}
+
+.padding-left-xsmall {
+  padding-left: var(--xsmall);
+}
+
+.padding-left-small {
+  padding-left: var(--small);
+}
+
+.padding-left-medium {
+  padding-left: var(--medium);
+}
+
+.padding-left-large {
+  padding-left: var(--large);
+}
+
+.margin-xxsmall {
+  margin: var(--xxsmall);
+}
+
+.margin-xsmall {
+  margin: var(--xsmall);
+}
+
+.margin-small {
+  margin: var(--small);
+}
+
+.margin-medium {
+  margin: var(--medium);
+}
+
+.margin-large {
+  margin: var(--large);
+}
+
+.margin-sides-xsmall {
+  margin-left: var(--xsmall);
+  margin-right: var(--xsmall);
+}
+
+.margin-sides-small {
+  margin-left: var(--small);
+  margin-right: var(--small);
+}
+
+.margin-sides-medium {
+  margin-left: var(--medium);
+  margin-right: var(--medium);
+}
+
+.margin-sides-large {
+  margin-left: var(--large);
+  margin-right: var(--large);
+}
+
+.margin-vertical-xsmall {
+  margin-top: var(--xsmall);
+  margin-bottom: var(--xsmall);
+}
+
+.margin-vertical-small {
+  margin-top: var(--small);
+  margin-bottom: var(--small);
+}
+
+.margin-vertical-medium {
+  margin-top: var(--medium);
+  margin-bottom: var(--medium);
+}
+
+.margin-vertical-large {
+  margin-top: var(--large);
+  margin-bottom: var(--large);
+}
+
+.margin-top-xsmall {
+  margin-top: var(--xsmall);
+}
+
+.margin-top-small {
+  margin-top: var(--small);
+}
+
+.margin-top-medium {
+  margin-top: var(--medium);
+}
+
+.margin-top-large {
+  margin-top: var(--large);
+}
+
+.margin-top-xlarge {
+  margin-top: var(--xlarge);
+}
+
+.margin-top-xxlarge {
+  margin-top: var(--xxlarge);
+}
+
+.margin-right-xsmall {
+  margin-right: var(--xsmall);
+}
+
+.margin-right-small {
+  margin-right: var(--small);
+}
+
+.margin-bottom-xsmall {
+  margin-bottom: var(--xsmall);
+}
+
+.margin-bottom-small {
+  margin-bottom: var(--small);
+}
+
+.margin-bottom-medium {
+  margin-bottom: var(--medium);
+}
+
+.margin-bottom-large {
+  margin-bottom: var(--large);
+}
+
+.margin-bottom-xlarge {
+  margin-bottom: var(--xlarge);
+}
+
+.margin-bottom-xxlarge {
+  margin-bottom: var(--xxlarge);
+}
+
+.margin-bottom-xxxxlarge {
+  margin-bottom: var(--xxxxlarge);
+}
+
+.margin-left-xsmall {
+  margin-left: var(--xsmall);
+}
+
+.margin-left-small {
+  margin-left: var(--small);
+}
+
+.margin-left-medium {
+  margin-left: var(--medium);
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.lighter {
+  font-weight: 300;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.block {
+  display: block;
+}
+
+.flex-axis-center {
+  align-items: center;
+}
+
+.flex-crossaxis-center {
+  justify-content: center;
+}
+
+.flex-crossaxis-end {
+  justify-content: flex-end;
+}
+
+.flex-axis-end {
+  align-items: flex-end;
+}
+
+.flex-axis-start {
+  align-items: flex-start;
+}
+
+.flex-crossaxis-start {
+  justify-content: flex-start;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.height-header {
+  height: 50px;
+}
+
+.max-width {
+  max-width: var(--screen-size);
+}
+
+.max-width-xlarge {
+  max-width: var(--xlarge);
+}
+
+.max-width-xxlarge {
+  max-width: var(--xxlarge);
+}
+
+.max-width-xxxlarge {
+  max-width: var(--xxxlarge);
+}
+
+.max-width-xxxxlarge {
+  max-width: var(--xxxxlarge);
+}
+
+.max-height-xxxxlarge {
+  max-height: var(--xxxxlarge);
+}
+
+.width-100p {
+  width: 100%;
+}
+
+.width-50p {
+  width: 50%;
+}
+
+.max-width-50p {
+  max-width: 50%;
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.color-secondary {
+  color: var(--secondary-color);
+}
+
+.color-tertiary {
+  color: var(--tertiary-color);
+}
+
+.shadow {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.radius-rounded {
+  border-radius: 50%;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  align-self: flex-start;
+  top: 0;
+  z-index: 100;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.align-right {
+  right: var(--small);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#small-show {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  #small-hide {
+    display: none;
+  }
+
+  #small-show {
+    display: flex;
+  }
 }
