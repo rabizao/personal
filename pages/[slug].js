@@ -1,5 +1,7 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../components/Header";
 
 import {
   getAllPosts,
@@ -16,12 +18,20 @@ export default function Post({ post }) {
 
   return (
     <>
+      <Head>
+        <title>{post.title} | Rafael Bizao</title>
+        <meta name="description" content="Dicas de Python, Flask, ReactJS, DevOps, GCP e desenvolvimento web no geral" />
+        <meta name="keywords" content="python, flask, reactjs, react, devops, gcp, web, web development, deploy, ci, cd" />
+        <meta httpEquiv="content-language" content="pt-br, en-US" />
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+      </Head>
+      <Header />
+      <div className="margin-vertical-large margin-sides-medium">
+        <div className="max-width margin-auto">
+          <Link href="/">
+            <a>← Home</a>
+          </Link>
 
-      <div className="flex flex-center margin-vertical-large margin-sides-medium">
-        <Link href="/">
-          <a>← Home</a>
-        </Link>
-        <div className="max-width">
           <h1 className="size-xxlarge bold">{post.title}</h1>
 
           <div className="flex-row flex-axis-center margin-bottom-small">
@@ -32,7 +42,6 @@ export default function Post({ post }) {
               height="40"
               width="40"
             />
-
             <div className="margin-left-xsmall">
               <strong>{post.author.name}</strong> -
               <time dateTime={post.createdAt}> {prettyDate}.</time>
@@ -40,10 +49,12 @@ export default function Post({ post }) {
           </div>
 
           <div dangerouslySetInnerHTML={{ __html: post.body }} />
+
+          <Link href="/">
+            <a>← Home</a>
+          </Link>
+
         </div>
-        <Link href="/">
-          <a>← Home</a>
-        </Link>
       </div>
     </>
   );
