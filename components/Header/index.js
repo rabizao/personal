@@ -5,7 +5,7 @@ export default function Header() {
     <div className="padding-large background-primary">
       <span className="size-xxlarge bold color-secondary">Rafael Bizão</span>
       <p className="color-secondary size-smaller lighter">rabizao@gmail.com</p>
-      <p className="color-secondary lighter">Dicas de Python, Flask, ReactJS, DevOps, GCP e desenvolvimento web no geral</p>
+      <p className="color-secondary lighter">Python, Flask, ReactJS, DevOps, Cloud e desenvolvimento web em geral</p>
     </div>
   )
 }
