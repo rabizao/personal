@@ -20,9 +20,9 @@ export default function Post({ post }) {
     <>
       <Head>
         <title>{post.title} | Rafael Bizao</title>
-        <meta name="description" content="Dicas de Python, Flask, ReactJS, DevOps, GCP e desenvolvimento web no geral" />
-        <meta name="keywords" content="python, flask, reactjs, react, devops, gcp, web, web development, deploy, ci, cd" />
-        <meta httpEquiv="content-language" content="pt-br, en-US" />
+        <meta name="description" content={post.excerpt} />
+        <meta name="keywords" content={post.keywords} />
+        <meta httpEquiv="content-language" content={post.language} />
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
       </Head>
       <Header />

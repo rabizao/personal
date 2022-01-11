@@ -2,7 +2,9 @@
 title: "Deploy automático do GitHub para qualquer servidor"
 excerpt: "Uma maneira simples de implementar integração contínua nos seus projetos do GitHub para quaisquer servidores (tanto em clouds - AWS, Google, Azure, etc como servidores próprios ou VPS)."
 createdAt: "2022-01-06"
-author: rafaelbizao
+author: "rafaelbizao"
+keywords: "devops, shell script, cloud, gcp, aws, azure, deploy, ci, cd"
+language: "pt-br"
 ---
 
 
