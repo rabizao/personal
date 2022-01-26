@@ -17,7 +17,7 @@ Porém também têm algumas desvantagens, como o fato de os ambientes que oferec
 
 ## Uma API simples para servir de exemplo
 
-Iniciaremos com uma API que servirá de exemplo. Para isso, criaremos uma pasta chamada ***cloudrun_example***. Dentro dessa pasta, criaremos uma outra pasta chamada ***app*** e um arquivo chamado ***main.py*** dentro da pasta ***app*** que ficará o código da API:
+Iniciaremos com uma API que servirá de exemplo. Para isso, criaremos uma pasta chamada ***cloudrun_example***. Dentro dessa pasta, criaremos um arquivo chamado ***main.py*** que ficará o código da API:
 
 ```python
 from flask import Flask
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
 Ou seja, trata-se da API mais simples que podemos construir utilizando *Flask*, que quando recebe uma chamada retorna um objeto JSON {"hello": "world"}.
 
-Agora precisamos criar um arquivo que será utilizado pela GCP para subir nossa aplicação. Devemos imaginar as instruções abaixo como se nossa API estivesse sendo executada pela primeira vez em um computador normal, ou seja, você deve ter o python instalado e as bibliotecas que utiliza na API (no nosso caso apenas o Flask). Dado isso, crie um arquivo chamado ***Dockerfile*** também na pasta ***app*** com o seguinte conteúdo:
+Agora precisamos criar um arquivo que será utilizado pela GCP para subir nossa aplicação. Devemos imaginar as instruções abaixo como se nossa API estivesse sendo executada pela primeira vez em um computador normal, ou seja, você deve ter o python instalado e as bibliotecas que utiliza na API (no nosso caso apenas o Flask). Dado isso, crie um arquivo chamado ***Dockerfile*** também na pasta ***cloudrun_example*** com o seguinte conteúdo:
 
 ```Dockerfile
 # Use the official Python image.
@@ -63,7 +63,7 @@ gcloud builds submit --tag=gcr.io/<project>/helloworld
 gcloud run deploy helloworld --image=gcr.io/<project>/helloworld
 ```
 
-O primeiro comando gera a imagem docker com a tag especificada a seguir e o segundo sobe a aplicação. Você deve substituir a parte ***<project>*** pelo nome do projeto que criou anteriormente dentro da GCP e ***helloworld*** é o nome que escolhi para o serviço que iremos subir. Quando utilizar o segundo comando, deverá responder se deseja permitir chamadas sem autenticação para o serviço que está subindo (*Allow unauthenticated invocations to [helloworld] (y/N)?*), o que é o nosso caso já que queremos que qualquer pessoa tenha acesso a ela, então deve responder com ***y***.
+O primeiro comando gera a imagem docker com a tag especificada e o segundo sobe a aplicação. Você deve substituir a parte ***<project>*** pelo nome do projeto que criou anteriormente dentro da GCP e ***helloworld*** é o nome que escolhi para o serviço que iremos subir. Quando utilizar o segundo comando, deverá responder se deseja permitir chamadas sem autenticação para o serviço que está subindo (*Allow unauthenticated invocations to [helloworld] (y/N)?*), o que é o nosso caso já que queremos que qualquer pessoa tenha acesso a ela, então deve responder com ***y***.
 
 ![Cloud Run](/images/post-cloud-run/cloudrun.png "Cloud Run")
 
