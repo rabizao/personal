@@ -10,8 +10,8 @@ export default function Posts({ posts }) {
     <>
       <Head>
         <title>Home | Rafael Bizao</title>
-        <meta name="description" content="Dicas de Python, Flask, ReactJS, DevOps, GCP e desenvolvimento web no geral" />
-        <meta name="keywords" content="python, flask, reactjs, react, devops, gcp, web, web development, deploy, ci, cd" />
+        <meta name="description" content="Python, Flask, ReactJS, DevOps, Cloud, web development" />
+        <meta name="keywords" content="python, flask, reactjs, react, devops, gcp, cloud, oracle cloud, azure, web, web development, deploy, ci, cd" />
         <meta httpEquiv="content-language" content="pt-br, en-US" />
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
       </Head>
