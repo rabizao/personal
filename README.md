@@ -1,3 +1,6 @@
+This repository contains my personal website in which I post some tips and tutorials about web development and deployment as well as information about my personal projects. Take a look at: https://www.rafaelbizao.com. It was based on NextJS tutorials. Feel free to fork and use as your own blog/website/portfolio!
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
